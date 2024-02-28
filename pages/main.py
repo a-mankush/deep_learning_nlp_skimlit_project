@@ -20,7 +20,7 @@ def get_predictions(inputs, _loaded_model):
 
 @st.cache_resource()
 def load_skimlit_model():
-    return tf.keras.models.load_model("C:/Users/aman kushwaha/Downloads/aab/modelb8/skimLit_8b")
+    return tf.keras.models.load_model("skimLit_8b")
 
 
 def main():
