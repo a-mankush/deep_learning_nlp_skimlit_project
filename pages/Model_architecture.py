@@ -1,14 +1,14 @@
 import streamlit as st
 
-
-
 st.header("SkimLit Model Architecture")
-st.markdown("""
+st.markdown(
+    """
 This model is a **multi-modal** text classification model that leverages both **word-level** and
 **character-level** information, along with **contextual features** like **line number** and **total line count**,
 to **predict** the **category** of a text snippet.
-""")
-st.image(image='images/model.png')
+"""
+)
+st.image(image="images/model.png")
 
 """
 ### 0. Data Loading
@@ -32,7 +32,8 @@ train_char_token_pos_dataset = tf.data.Dataset.zip((
 - `prefetch(tf.data.AUTOTUNE)`: This instructs TensorFlow to pre-fetch data from the disk or memory in the background while the model is training. This can significantly improve training speed by overlapping data loading with model training computations.
 """
 
-st.markdown("""
+st.markdown(
+    """
 ### 1. Token inputs/Model
 ```python
 token_input = keras.Input(shape=(1,), dtype="string", name='token_input')
@@ -45,7 +46,8 @@ custom_token_model = keras.Model(inputs=token_input, outputs=bi_lstm_layer)
 - **Text Vectorization (text_vectorizer_layer):** The Keras TextVectorization layer converts the input text into a numerical format suitable for deep learning.
 - **Embedding (text_embedding):** The Embedding layer transforms the numerical representations obtained from text vectorization into dense vectors with fixed dimensions. It learns relationships and meanings between words.
 - **Bidirectional LSTM (bi_lstm_layer):** A Bidirectional LSTM layer processes the embedded tokens in both forward and backward directions. This helps capture context information effectively.
-""")
+"""
+)
 
 """
 ### 2. Character inputs/Model
@@ -130,8 +132,6 @@ model_8b = keras.Model(
 """
 
 
+col1, col2, col3 = st.columns(3)
 
-
-
-
-
+col3.page_link("pages/dataset.py", label="Next: Dataset ➡️")
