@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.write("# MediScan: Making Medical Texts More Readable with Deep Learning")
-# st.sidebar("Welcome to SkimLit")
+# st.sidebar("Welcome to MediScan")
 image1 = "images/Body_3.png"
 image2 = None
 
@@ -39,7 +39,7 @@ st.markdown(
 
 _, _, col3 = st.columns(3)
 
-col3.page_link("pages/main.py", label="Next: Skimlit Model ➡️")
+col3.page_link("pages/main.py", label="Next: MediScan Model ➡️")
 # st.page_link("pages/dataset.py", label="Dataset", icon="🧠")
 
 # - [Model architecture](Model_architecture)

@@ -7,7 +7,7 @@ from spacy.lang.en import English
 
 from utils import abstract_to_sentence, get_predictions_labels, preprocess_text
 
-# loaded_model = tf.keras.models.load_model("skimLit_8b")
+# loaded_model = tf.keras.models.load_model("MediScan_8b")
 
 nlp = English()
 sentencizer = nlp.add_pipe("sentencizer")
@@ -20,13 +20,13 @@ def get_predictions(inputs, _loaded_model):
 
 
 @st.cache_resource()
-def load_skimlit_model():
-    return tf.keras.models.load_model("skimLit_8b")
+def load_MediScan_model():
+    return tf.keras.models.load_model("MediScan_8b")
 
 
 def prediction_and_display(abstract):
     bar = st.progress(0)
-    model = load_skimlit_model()
+    model = load_MediScan_model()
     bar.progress(20)
     predictions = get_predictions(abstract, model)
     bar.progress(80)

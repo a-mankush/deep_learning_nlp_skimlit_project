@@ -13,7 +13,7 @@ def read_dataset(filename) -> pd.DataFrame:
 """
 # Dataset
 
-Dateset used for training the skimlit is https://github.com/Franck-Dernoncourt/pubmed-rct.git . Within it there are multiple datasets available and I have chosen **PubMed_20k_number_replace_with_at_sign**.
+Dateset used for training the MediScan is https://github.com/Franck-Dernoncourt/pubmed-rct.git . Within it there are multiple datasets available and I have chosen **PubMed_20k_number_replace_with_at_sign**.
 
 #### The original dataset looks like this:
 ```

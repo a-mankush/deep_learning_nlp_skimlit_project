@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.header("SkimLit Model Architecture")
+st.header("MediScan Model Architecture")
 st.markdown(
     """
 This model is a **multi-modal** text classification model that leverages both **word-level** and
@@ -128,7 +128,7 @@ model_8b = keras.Model(
         outputs=outputs
 )
 ```
-- The **Model** class is used to define the complete Skimlit model, taking token, char, line number, and total line inputs and producing the final output.
+- The **Model** class is used to define the complete MediScan model, taking token, char, line number, and total line inputs and producing the final output.
 """
 
 

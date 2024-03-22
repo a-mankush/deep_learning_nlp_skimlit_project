@@ -53,3 +53,6 @@ def preprocess_text(text):
 def get_predictions_labels(predictions_values):
     class_names = ['BACKGROUND', 'CONCLUSIONS', 'METHODS', 'OBJECTIVE', 'RESULTS']
     return [class_names[i] for i in tf.argmax(predictions_values, axis=1)]
+
+
+
