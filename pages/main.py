@@ -21,7 +21,7 @@ def get_predictions(inputs, _loaded_model):
 
 @st.cache_resource()
 def load_MediScan_model():
-    return tf.keras.models.load_model("MediScan_8b")
+    return tf.keras.models.load_model("skimLit_8b")
 
 
 def prediction_and_display(abstract):
