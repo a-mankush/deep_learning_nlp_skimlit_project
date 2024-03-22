@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.write("# SkimLit: Making Medical Texts More Readable with Deep Learning")
+st.write("# MediSacn: Making Medical Texts More Readable with Deep Learning")
 # st.sidebar("Welcome to SkimLit")
 image1 = "images/Body_3.png"
 image2 = None
@@ -9,7 +9,7 @@ image2 = None
 st.markdown(
     """
         In the realm of 📚**medical literature**, dense paragraphs filled with **technical 
-        jargon** can be daunting for both 👩‍⚕️**healthcare professionals** the 🌐**general audience**.
+        jargon** can be daunting for both 👩‍⚕️**healthcare professionals** and the 🌐**general audience**.
         Skimming through ⏳**lengthy medical texts** to extract key information is a skill that 
         requires time and effort. However, this project/model makes those 📝dense paragraphs more skimmable and accessible
         **ultimately improving readability** """
@@ -25,7 +25,7 @@ st.markdown(
     in Medical Paper Abstracts.](https://arxiv.org/pdf/1612.05251.pdf) and https://github.com/mrdbourke/tensorflow-deep-learning 
     
     
-    It is a **deep learning model** that designed to take paragraphs related to medicine as input and divide them into **distinct sections**,
+    It is a **deep learning model** that is designed to take paragraphs related to medicine as input and divide them into **distinct sections**,
     such as the objective, result, conclusion, and more. This makes the information more skimmable and accessible,
     **ultimately improving readability**.
     
