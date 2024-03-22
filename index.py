@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.write("# MediSacn: Making Medical Texts More Readable with Deep Learning")
+st.write("# MediScan: Making Medical Texts More Readable with Deep Learning")
 # st.sidebar("Welcome to SkimLit")
 image1 = "images/Body_3.png"
 image2 = None
