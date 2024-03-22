@@ -43,7 +43,7 @@ def prediction_and_display(abstract):
 
 
 def main():
-    st.header("Welcome to the SkimLit Project")
+    st.header("Welcome to the MediScan")
     abstract = st.text_area("Enter your abstract here")
     with st.expander("Some example text to test the model"):
         """
@@ -53,12 +53,12 @@ def main():
         Friendship Training to be superior to wait-list control with maintenance of gains at 3-month follow-up.
         Participants were families of children diagnosed with autism spectrum disorder who completed Children's
         Friendship Training 1-5 years earlier. They were recruited through mail, phone, and email.
-        Information collected included parent and child completed questionnaires and a phone interview.
+        Information collected included parent and child-completed questionnaires and a phone interview.
         Data were collected on 24 of 52 potential participants (46%). With an average of 35-month follow-up,
         participants had a mean age of 12.6 years. Results indicated that participants at follow-up were
         invited on significantly more play dates, showed less play date conflict, improved significantly
-        in parent-reported social skills and problem behaviors, and demonstrated marginally significant
-        decreases in loneliness when compared to pre-Children's Friendship Training.
+        in parent-reported social skills and problem behaviours, and demonstrated marginally significant
+        decreases in loneliness when compared to pre-children's Friendship Training.
 
         ### Example 2:
         A.D.A.M (Animated Dissection of Anatomy for Medicine) contains articles discussing diseases, tests,
