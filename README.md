@@ -2,7 +2,7 @@
 
 ## Demo
 
-<img src="images/body_3.png">
+<img src="images/Body_3.png">
 
 
 ### Model Architecture:
