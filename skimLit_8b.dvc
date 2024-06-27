@@ -1,0 +1,6 @@
+outs:
+- md5: a8d736012e7a376755ab4218c5b6854c.dir
+  size: 218028870
+  nfiles: 5
+  hash: md5
+  path: skimLit_8b

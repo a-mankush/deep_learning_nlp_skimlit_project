@@ -1,10 +1,6 @@
-import time
-from pprint import pprint
-
 import streamlit as st
 import tensorflow as tf
 from spacy.lang.en import English
-
 from utils import abstract_to_sentence, get_predictions_labels, preprocess_text
 
 # loaded_model = tf.keras.models.load_model("MediScan_8b")

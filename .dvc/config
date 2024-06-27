@@ -1,4 +1,5 @@
 [core]
-    remote = skimlit_model
-['remote "skimlit_model"']
+    remote = model_remote
+['remote "model_remote"']
     url = gdrive://1xR670uufXcbaLgR7zaaawttSB4j8dBg_
+    gdrive_user_credentials_file = ../1xR670uufXcbaLgR7zaaawttSB4j8dBg_
