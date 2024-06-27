@@ -1,9 +1,13 @@
+import os
+import subprocess
+
 import streamlit as st
 
 st.write("# MediScan: Making Medical Texts More Readable with Deep Learning")
 # st.sidebar("Welcome to MediScan")
 image1 = "images/Body_3.png"
 image2 = None
+
 
 
 st.markdown(

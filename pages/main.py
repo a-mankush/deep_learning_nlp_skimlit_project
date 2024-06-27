@@ -1,12 +1,31 @@
+import os
+import subprocess
+from pathlib import Path
+
 import streamlit as st
 import tensorflow as tf
 from spacy.lang.en import English
+
 from utils import abstract_to_sentence, get_predictions_labels, preprocess_text
 
 # loaded_model = tf.keras.models.load_model("MediScan_8b")
 
 nlp = English()
 sentencizer = nlp.add_pipe("sentencizer")
+
+
+model = Path("skimLit_8b")
+
+
+def fetch_model():
+    if not model.exists():
+        result = subprocess.run(["dvc", "pull"], capture_output=True, text=True)
+        if result.returncode != 0:
+            st.error("Failed to fetch model: " + result.stderr)
+            return False
+        return True
+    elif model.exists():
+        return True
 
 
 @st.cache_data()
@@ -22,7 +41,8 @@ def load_MediScan_model():
 
 def prediction_and_display(abstract):
     bar = st.progress(0)
-    model = load_MediScan_model()
+    if fetch_model():
+        model = load_MediScan_model()
     bar.progress(20)
     predictions = get_predictions(abstract, model)
     bar.progress(80)
