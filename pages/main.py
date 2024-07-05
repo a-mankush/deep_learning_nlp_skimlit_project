@@ -24,6 +24,7 @@ def fetch_model():
         result = download_model()
         if not result:
             return False
+        return True
     elif model.exists():
         return True
 
@@ -36,7 +37,7 @@ def get_predictions(inputs, _loaded_model):
 
 @st.cache_resource()
 def load_MediScan_model():
-    return tf.saved_model.load("skimLit_8b")
+    return tf.keras.models.load_model("skimLit_8b")
 
 
 def prediction_and_display(abstract):
