@@ -2,6 +2,7 @@ import os
 import subprocess
 from pathlib import Path
 
+import gdown
 import streamlit as st
 import tensorflow as tf
 from spacy.lang.en import English
@@ -19,7 +20,7 @@ model = Path("skimLit_8b")
 
 def fetch_model():
     if not model.exists():
-        result = subprocess.run(["dvc", "pull"], capture_output=True, text=True)
+        result = subprocess.run(["python", "download_model.py"], capture_output=True, text=True)
         if result.returncode != 0:
             st.error("Failed to fetch model: " + result.stderr)
             return False
@@ -36,26 +37,28 @@ def get_predictions(inputs, _loaded_model):
 
 @st.cache_resource()
 def load_MediScan_model():
-    return tf.keras.models.load_model("skimLit_8b")
+    return tf.saved_model.load("skimLit_8b")
 
 
 def prediction_and_display(abstract):
     bar = st.progress(0)
     if fetch_model():
         model = load_MediScan_model()
-    bar.progress(20)
-    predictions = get_predictions(abstract, model)
-    bar.progress(80)
-    pred_classes = get_predictions_labels(predictions)
-    bar.progress(100)
-    st.success("Prediction completed!")
-    for i, sent in enumerate(abstract_to_sentence(abstract)):
-        st.markdown(
-            f"""
-                - <i style="color:orange;">&#9872;</i> **`{pred_classes[i]}`**: {sent}
-                """,
-            unsafe_allow_html=True,
-        )
+        bar.progress(20)
+        predictions = get_predictions(abstract, model)
+        bar.progress(80)
+        pred_classes = get_predictions_labels(predictions)
+        bar.progress(100)
+        st.success("Prediction completed!")
+        for i, sent in enumerate(abstract_to_sentence(abstract)):
+            st.markdown(
+                f"""
+                    - <i style="color:orange;">&#9872;</i> **`{pred_classes[i]}`**: {sent}
+                    """,
+                unsafe_allow_html=True,
+            )
+    else:
+        st.error("Failed to fetch model")
 
 
 def main():

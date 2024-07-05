@@ -9,14 +9,13 @@ image1 = "images/Body_3.png"
 image2 = None
 
 
-
 st.markdown(
     """
-        In the realm of 📚**medical literature**, dense paragraphs filled with **technical 
-        jargon** can be daunting for both 👩‍⚕️**healthcare professionals** and the 🌐**general audience**.
-        Skimming through ⏳**lengthy medical texts** to extract key information is a skill that 
-        requires time and effort. However, this project/model makes those 📝dense paragraphs more skimmable and accessible
-        **ultimately improving readability** """
+        Navigating the intricate world of medical literature can be a daunting task.
+        Dense paragraphs filled with technical jargon often overwhelm healthcare professionals
+        and the general public alike, making it challenging to extract crucial information quickly.
+        Our project addresses this issue by transforming these complex texts into more skimmable and
+        accessible formats, significantly enhancing readability and comprehension. """
 )
 
 st.image(image1)
@@ -26,12 +25,13 @@ st.markdown(
     """
     ## **Introduction**
     The main motivation for this project comes from the paper  [Neural Networks for Joint Sentence Classification
-    in Medical Paper Abstracts.](https://arxiv.org/pdf/1612.05251.pdf) and https://github.com/mrdbourke/tensorflow-deep-learning 
+    in Medical Paper Abstracts.](https://arxiv.org/pdf/1612.05251.pdf) 
     
     
-    It is a **deep learning model** that is designed to take paragraphs related to medicine as input and divide them into **distinct sections**,
-    such as the objective, result, conclusion, and more. This makes the information more skimmable and accessible,
-    **ultimately improving readability**.
+    Inspired by research, including the paper "Neural Networks for Joint Sentence Classification in Medical
+    Paper Abstracts" and advanced deep learning resources, our model is designed to revolutionize the way medical information
+    is presented. By processing medical paragraphs and dividing them into distinct sections such as objectives, results, background, method
+    and conclusions, we make vital information more approachable and easier to digest.
     
     ### Know more about
      - 📊[Model architecture](Model_architecture)
