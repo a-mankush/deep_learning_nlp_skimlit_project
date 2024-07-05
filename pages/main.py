@@ -7,6 +7,7 @@ import streamlit as st
 import tensorflow as tf
 from spacy.lang.en import English
 
+from download_model import download_folder_from_google_drive, download_model
 from utils import abstract_to_sentence, get_predictions_labels, preprocess_text
 
 # loaded_model = tf.keras.models.load_model("MediScan_8b")
@@ -20,11 +21,9 @@ model = Path("skimLit_8b")
 
 def fetch_model():
     if not model.exists():
-        result = subprocess.run(["python", "download_model.py"], capture_output=True, text=True)
-        if result.returncode != 0:
-            st.error("Failed to fetch model: " + result.stderr)
+        result = download_model()
+        if not result:
             return False
-        return True
     elif model.exists():
         return True
 

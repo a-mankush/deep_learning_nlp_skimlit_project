@@ -7,3 +7,4 @@ seaborn~=0.13.2
 plotly~=5.19.0
 dvc
 dvc_gdrive
+gdown

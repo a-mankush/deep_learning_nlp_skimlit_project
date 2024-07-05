@@ -10,7 +10,7 @@ def download_folder_from_google_drive(folder_id, output_path):
     gdown.download_folder(url, output=output_path, quiet=False, use_cookies=False)
 
 
-def main():
+def download_model():
     # The ID of the shared Google Drive folder (skimLit_8b)
     folder_id = (
         "1s4YLSBbFv9BP4FhcICObZI4xP6KSb3xc"  # Replace this with the actual folder ID
@@ -41,10 +41,6 @@ def main():
     # except Exception as e:
     #     print(f"Error loading the model: {e}")
     #     return
-
-
-if __name__ == "__main__":
-    main()
 
     # Optional: Clean up downloaded files
     # Uncomment the following line if want to remove the downloaded folder after loading the model
